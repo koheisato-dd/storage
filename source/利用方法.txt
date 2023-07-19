@@ -1,0 +1,22 @@
+■環境確認
+   CentOS 9
+   Eclipse Temurin 17.0.6+10
+   Apache Maven 3.9.2
+
+   ※Java実行環境がTemurinであるため、jvm.optionsでdd-java-agent.jarを設定。
+
+■Spring MVC バージョン 5
+    export DD_SERVICE=spring-mvc-5.0
+  
+  cd spring-mvc-5.0
+  mvn clean package
+  mvn liberty:run
+  curl localhost:9081/ … 別ターミナルから
+
+■Spring MVC バージョン 6
+    export DD_SERVICE=spring-mvc-6.0
+  
+  cd spring-mvc-6.0
+  mvn clean package
+  mvn liberty:run
+  curl localhost:9082/ … 別ターミナルから
